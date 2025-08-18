@@ -1,0 +1,48 @@
+body {
+    height: 100vh;
+    margin: 0;
+    overflow: hidden;
+    position: relative;
+}
+
+h2 {
+    z-index: 2;
+    font-size: 100px;
+}
+
+/* planets */
+.moon {
+    z-index: 1;
+    width: 75px;
+    height:75px;
+    background-image: url("https://imgs.search.brave.com/A3GYeyu0j4gsnvxXBslkJQpV_9tiaizsCR4wdIJVW1k/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly9hc3Nl/dHMuc3RpY2twbmcu/Y29tL2ltYWdlcy81/OGY5ZmQ1ODBlZDJi/ZGFmN2MxMjgzMjcu/cG5n");
+    background-size: cover;
+    background-position: center;
+    position: absolute;
+    border-radius: 50%;
+    animation: moonMove 8s linear infinite;
+}
+
+/* planet animations */
+@keyframes moonMove {
+    0% {
+        top: 10px;
+        left: 10px;
+    }
+    25% {
+        top: 10px;
+        left: calc(100% - 90px);
+    }
+    50% {
+        top: calc(100% - 100px);
+        left: calc(100% - 90px);
+    }
+    75% {
+        top: calc(100% - 100px);
+        left: 10px;
+    }
+    100% {
+        top: 10px;
+        left: 10px;
+    }
+}
