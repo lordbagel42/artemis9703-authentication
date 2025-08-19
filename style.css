@@ -2,25 +2,42 @@ body {
     height: 100vh;
     margin: 0;
     overflow: hidden;
-    position: relative;
+    z-index: 0;
+    background-image: url("https://imgs.search.brave.com/dhmLqvapfWl8jPLViC6YUhO1aAh_UMWRVSquhOPfFcY/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly93YWxs/cGFwZXJhY2Nlc3Mu/Y29tL2Z1bGwvNDEz/MjQ0LmpwZw");
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
-h2 {
+h2, p {
+    color: white;
+    position: relative;
     z-index: 2;
-    font-size: 100px;
+    text-align: center;
 }
 
 /* planets */
 .moon {
     z-index: 1;
-    width: 75px;
-    height:75px;
+    width: 50px;
+    height:50px;
     background-image: url("https://imgs.search.brave.com/A3GYeyu0j4gsnvxXBslkJQpV_9tiaizsCR4wdIJVW1k/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly9hc3Nl/dHMuc3RpY2twbmcu/Y29tL2ltYWdlcy81/OGY5ZmQ1ODBlZDJi/ZGFmN2MxMjgzMjcu/cG5n");
     background-size: cover;
     background-position: center;
     position: absolute;
     border-radius: 50%;
-    animation: moonMove 8s linear infinite;
+    animation: moonMove 18s linear infinite;
+}
+
+.mars {
+    z-index: 1;
+    width: 65px;
+    height: 65px;
+    background-image: url("https://imgs.search.brave.com/J-gMLVePvPSca_ARsh6dtY0h713DAod53imqTjtbMfc/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9jcmVh/emlsbGEtc3RvcmUu/ZnJhMS5kaWdpdGFs/b2NlYW5zcGFjZXMu/Y29tL2NsaXBhcnRz/LzM0NzM2NzIvbWFy/cy1jbGlwYXJ0LXNt/LnBuZw");
+    background-size: cover;
+    background-position: center;
+    position: absolute;
+    border-radius: 50%;
+    animation: marsMove 8s linear infinite;
 }
 
 /* planet animations */
@@ -44,5 +61,28 @@ h2 {
     100% {
         top: 10px;
         left: 10px;
+    }
+}
+
+@keyframes marsMove {
+    0% {
+        top: 10px;
+        left: 50%;
+    }
+    25% {
+        top: 50%;
+        left: calc(100% - 10%);
+    }
+    50% {
+        top: calc(100% - 10%);
+        left: calc(100% - 50%);
+    }
+    75% {
+        top: calc(100% - 50%);
+        left: 10px;
+    }
+    100% {
+        top: 10px;
+        left: 50%;
     }
 }
