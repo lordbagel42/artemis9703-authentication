@@ -87,10 +87,11 @@ h2, p {
 }
 .saturn {
     z-index: 1;
-    width: 95px;
-    height:95px;
-    background-image: url("https://imgs.search.brave.com/6pjR4oDYmG_7ND9k9DocB5DCxLswclGMrA0evKaO8pc/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly9jZG4u/Y3JlYXppbGxhLmNv/bS9jbGlwYXJ0cy8z/NDczNjI4L3NhdHVy/bi1jbGlwYXJ0LW1k/LnBuZw");
-    background-size: cover;
+    width: 180px;
+    height:180px;
+    background-image: url("https://imgs.search.brave.com/eXp3GeHrACkGvF-yk6gZYd5FjPfwvkpfAlTcYuZ77RQ/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly9jZG4u/Y3JlYXppbGxhLmNv/bS9jbGlwYXJ0cy83/OTI4MDQ4L3NhdHVy/bi1jbGlwYXJ0LW1k/LnBuZw");
+    background-size: 145px;
+    background-repeat: no-repeat;
     background-position: center;
     position: absolute;
     border-radius: 50%;
