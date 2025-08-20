@@ -7,16 +7,29 @@ body {
     background-repeat: no-repeat;
     background-size: cover;
 }
-
 h2, p {
     color: white;
     position: relative;
     z-index: 2;
     text-align: center;
-    -webkit-text-stroke: 1px black;
-    font-size: 50px;
 }
-
+h2 {
+    font-size: 50px;
+    -webkit-text-stroke: 1px black;
+}
+p {
+    font-size: 20px;
+}
+.sun {
+    z-index: 1;
+    width: 140px;
+    height: 140px;
+    background-image: url("https://imgs.search.brave.com/9cOhZBUUrWHEx-AzxvfaQb5qWpiXWcNsysSS9VWBlJQ/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9jZG4u/Y3JlYXppbGxhLmNv/bS9jbGlwYXJ0cy8x/NzIzMDc5L3N1bi1j/bGlwYXJ0LXNtLnBu/Zw");
+    background-size: cover;
+    position: absolute;
+    top: calc(100% - 57.5%);
+    left: calc(100% - 55%);
+}
 /* planets */
 .moon {
     z-index: 1;
