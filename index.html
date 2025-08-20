@@ -9,6 +9,100 @@
         <h2>welcome to our solar system</h2>
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur et labore illo at, repudiandae provident aut adipisci vel voluptatibus ducimus natus, expedita qui impedit placeat ad? Illum quae asperiores nesciunt!
         Ratione, dolore, asperiores minima iste a iusto ex, modi aliquam nulla assumenda non? Sint dolores maxime beatae itaque, dolorum voluptatibus deserunt error, facere obcaecati quia, autem laudantium nihil amet repellat!</p>
+        <div id="signup">
+            <h3>register</h3>
+            <form method="POST">
+                {% csrf_token %}
+                <label for="username">your username here</label><br>
+                <input type="text" id="username" name="username" required><br><br>
+
+                <label for="fav_planet">pick your favorite planet</label><br>
+                <select name="fav_planet" id="fav_planet">
+                    {% for option in planets %}
+                        <option value="{{ option }}">{{ option }}</option>
+                    {% endfor %}
+                </select><br><br>
+
+                <h4>build a rocket password!</h4>
+
+                <label for="nose">pick your nose</label><br>
+                <select name="nose" id="nose">
+                    {% for option in noses %}
+                        <option value="{{ option }}">{{ option }}</option>
+                    {% endfor %}
+                </select><br><br>
+
+                <label for="body">then a body</label><br>
+                <select name="body" id="body">
+                    {% for option in bodies %}
+                        <option value="{{ option }}">{{ option }}</option>
+                    {% endfor %}
+                </select><br><br>
+
+                <label for="fin">now some rocket fins</label><br>
+                <select name="fin" id="fin">
+                    {% for option in fins %}
+                        <option value="{{ option }}">{{ option }}</option>
+                    {% endfor %}
+                </select><br><br>
+
+                <label for="engine">finally, an engine</label><br>
+                <select name="engine" id="engine">
+                    {% for option in engines %}
+                        <option value="{{ option }}">{{ option }}</option>
+                    {% endfor %}
+                </select><br><br>
+
+                <button type="submit">make your account!</button>
+            </form>
+        </div>
+        <div id="login">
+            <h3>login</h3>
+            <form method="POST">
+                {% csrf_token %}
+                <label for="username">your username here</label><br>
+                <input type="text" id="username" name="username" required><br><br>
+
+                <label for="fav_planet">pick your favorite planet</label><br>
+                <select name="fav_planet" id="fav_planet">
+                    {% for option in planets %}
+                        <option value="{{ option }}">{{ option }}</option>
+                    {% endfor %}
+                </select><br><br>
+
+                <h4>enter your rocket password!</h4>
+
+                <label for="nose">pick your nose</label><br>
+                <select name="nose" id="nose">
+                    {% for option in noses %}
+                        <option value="{{ option }}">{{ option }}</option>
+                    {% endfor %}
+                </select><br><br>
+
+                <label for="body">then a body</label><br>
+                <select name="body" id="body">
+                    {% for option in bodies %}
+                        <option value="{{ option }}">{{ option }}</option>
+                    {% endfor %}
+                </select><br><br>
+
+                <label for="fin">now some rocket fins</label><br>
+                <select name="fin" id="fin">
+                    {% for option in fins %}
+                        <option value="{{ option }}">{{ option }}</option>
+                    {% endfor %}
+                </select><br><br>
+
+                <label for="engine">finally, an engine</label><br>
+                <select name="engine" id="engine">
+                    {% for option in engines %}
+                        <option value="{{ option }}">{{ option }}</option>
+                    {% endfor %}
+                </select><br><br>
+
+                <button type="submit">enter you space station!</button>
+            </form>
+        </div>
         <div class="sun"></div>
         <div class="moon"></div>
         <div class="mars"></div>
