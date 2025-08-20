@@ -22,8 +22,8 @@ p {
 }
 .sun {
     z-index: 1;
-    width: 140px;
-    height: 140px;
+    width: 150px;
+    height: 150px;
     background-image: url("https://imgs.search.brave.com/9cOhZBUUrWHEx-AzxvfaQb5qWpiXWcNsysSS9VWBlJQ/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9jZG4u/Y3JlYXppbGxhLmNv/bS9jbGlwYXJ0cy8x/NzIzMDc5L3N1bi1j/bGlwYXJ0LXNtLnBu/Zw");
     background-size: cover;
     position: absolute;
