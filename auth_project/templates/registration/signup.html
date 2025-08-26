@@ -2,9 +2,14 @@
 {% block title %}signup{% endblock %}
 {% block content %}
 <h2>signup</h2>
+<head>
+    <link rel="icon" type="image/x-icon" href="https://em-content.zobj.net/source/joypixels-animations/366/rocket_1f680.gif">
+</head>
+<body>
 <form method="post">
-   <!--{% csrf_token %}-->
+    {% csrf_token %}
     {{ form }}
     <button type="submit">sign up</button>
 </form>
+</body>
 {% endblock %}

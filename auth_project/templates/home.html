@@ -1,5 +1,255 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Explore Space</title>
+        <link rel="icon" type="image/x-icon" href="https://em-content.zobj.net/source/joypixels-animations/366/rocket_1f680.gif">
+    </head>
+    <body>
+        <h2>welcome to our solar system</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur et labore illo at, repudiandae provident aut adipisci vel voluptatibus ducimus natus, expedita qui impedit placeat ad? Illum quae asperiores nesciunt!
+        Ratione, dolore, asperiores minima iste a iusto ex, modi aliquam nulla assumenda non? Sint dolores maxime beatae itaque, dolorum voluptatibus deserunt error, facere obcaecati quia, autem laudantium nihil amet repellat!</p>
+        <div class="sun"></div>
+        <div class="moon"></div>
+        <div class="mars"></div>
+        <div class="mercury"></div>
+        <div class="venus"></div>
+        <div class="earth"></div>
+        <div class="jupiter"></div>
+        <div class="saturn"></div>
+        <div class="neptune"></div>
+        <div class="uranus"></div>
+        <div class="pluto"></div>
+        <style>body {
+    height: 100vh;
+    margin: 0;
+    overflow: hidden;
+    z-index: 0;
+    background-image: url("https://imgs.search.brave.com/dhmLqvapfWl8jPLViC6YUhO1aAh_UMWRVSquhOPfFcY/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly93YWxs/cGFwZXJhY2Nlc3Mu/Y29tL2Z1bGwvNDEz/MjQ0LmpwZw");
+    background-repeat: no-repeat;
+    background-size: cover;
+    text-align: center;
+}
+h2, h3, h4, p, label {
+    color: white;
+    position: relative;
+    z-index: 2;
+}
+h2 {
+    font-size: 50px;
+    -webkit-text-stroke: 1px black;
+}
+h3 {
+    font-size: 35px;
+}
+h4 {
+    font-size: 20px;
+}
+p {
+    font-size: 20px;
+}
+a:link, a:visited, a:active {
+    color: white;
+    text-decoration: underline;
+}
+a:hover {
+    text-decoration-style: wavy;
+}
+.sun {
+    z-index: 1;
+    width: 150px;
+    height: 150px;
+    background-image: url("https://imgs.search.brave.com/9cOhZBUUrWHEx-AzxvfaQb5qWpiXWcNsysSS9VWBlJQ/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9jZG4u/Y3JlYXppbGxhLmNv/bS9jbGlwYXJ0cy8x/NzIzMDc5L3N1bi1j/bGlwYXJ0LXNtLnBu/Zw");
+    background-size: cover;
+    position: absolute;
+    top: calc(100% - 57.5%);
+    left: calc(100% - 55%);
+}
+/* planets */
+.moon {
+    z-index: 1;
+    width: 50px;
+    height:50px;
+    background-image: url("https://imgs.search.brave.com/A3GYeyu0j4gsnvxXBslkJQpV_9tiaizsCR4wdIJVW1k/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly9hc3Nl/dHMuc3RpY2twbmcu/Y29tL2ltYWdlcy81/OGY5ZmQ1ODBlZDJi/ZGFmN2MxMjgzMjcu/cG5n");
+    background-size: cover;
+    background-position: center;
+    position: absolute;
+    border-radius: 50%;
+    animation: moonMove 18s linear infinite;
+}
+.mars {
+    z-index: 1;
+    width: 65px;
+    height: 65px;
+    background-image: url("https://imgs.search.brave.com/J-gMLVePvPSca_ARsh6dtY0h713DAod53imqTjtbMfc/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9jcmVh/emlsbGEtc3RvcmUu/ZnJhMS5kaWdpdGFs/b2NlYW5zcGFjZXMu/Y29tL2NsaXBhcnRz/LzM0NzM2NzIvbWFy/cy1jbGlwYXJ0LXNt/LnBuZw");
+    background-size: cover;
+    background-position: center;
+    position: absolute;
+    border-radius: 50%;
+    animation: marsMove 9s linear infinite;
+}
+.mercury {
+    z-index: 1;
+    width: 55px;
+    height:55px;
+    background-image: url("https://imgs.search.brave.com/Sm-YW8JGgBiUt2z055Y2OfeDvBEqny-gGTXLix0ApWo/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly9mcmVl/ZGVzaWduZmlsZS5j/b20vaW1hZ2UvdGh1/bWIvODI4NC9tZXJj/dXJ5LWNsaXBhcnQu/cG5n");
+    background-size: cover;
+    background-position: center;
+    position: absolute;
+    border-radius: 50%;
+    animation: mercuryMove 3s linear infinite;
+}
+
+.venus {
+    z-index: 1;
+    width: 70px;
+    height:70px;
+    background-image: url("https://imgs.search.brave.com/nyniZ50jEFKTtb30xn7u5jjqLjwgKiDN0WKzIOaZBpk/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly9jZG4u/Y3JlYXppbGxhLmNv/bS9jbGlwYXJ0cy8x/NTU2MjUxL3BsYW5l/dC12ZW51cy1jbGlw/YXJ0LXNtLnBuZw");
+    background-size: cover;
+    background-position: center;
+    position: absolute;
+    border-radius: 50%;
+    animation: venusMove 5s linear infinite;
+}
+.earth {
+    z-index: 1;
+    width: 72.5px;
+    height:72.5px;
+    background-image: url("https://imgs.search.brave.com/1SSVgoOqyS82jQ0M4NSFcpyQ58OXksyaXrWYV_GASy4/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly9jZG4u/Y3JlYXppbGxhLmNv/bS9jbGlwYXJ0cy8x/NTU2MjQ5L2VhcnRo/LWNsaXBhcnQtc20u/cG5n");
+    background-size: cover;
+    background-position: center;
+    position: absolute;
+    border-radius: 50%;
+    animation: earthMove 7s linear infinite;
+}
+.jupiter {
+    z-index: 1;
+    width: 100px;
+    height:100px;
+    background-image: url("https://imgs.search.brave.com/kZsvJ1J1-0_wbptfAPjKu96w6o1MgRoEw_SeIH7E_HE/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly9jZG4u/Y3JlYXppbGxhLmNv/bS9jbGlwYXJ0cy82/NDIwNy9qdXBpdGVy/LWNsaXBhcnQtc20u/cG5n");
+    background-size: cover;
+    background-position: center;
+    position: absolute;
+    border-radius: 50%;
+    animation: jupiterMove 11s linear infinite;
+}
+.saturn {
+    z-index: 1;
+    width: 180px;
+    height:180px;
+    background-image: url("https://imgs.search.brave.com/eXp3GeHrACkGvF-yk6gZYd5FjPfwvkpfAlTcYuZ77RQ/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly9jZG4u/Y3JlYXppbGxhLmNv/bS9jbGlwYXJ0cy83/OTI4MDQ4L3NhdHVy/bi1jbGlwYXJ0LW1k/LnBuZw");
+    background-size: 145px;
+    background-repeat: no-repeat;
+    background-position: center;
+    position: absolute;
+    border-radius: 50%;
+    animation: saturnMove 13s linear infinite;
+}
+.neptune {
+    z-index: 1;
+    width: 80px;
+    height:80px;
+    background-image: url("https://imgs.search.brave.com/hme9uHBUW_dt0dfyvjcDC09w5u-tv7qzKg1cMJ3VIgw/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly9mcmVl/ZGVzaWduZmlsZS5j/b20vaW1hZ2UvcHJl/dmlldy84Mjg2L25l/cHR1bmUtY2xpcGFy/dC5wbmc");
+    background-size: cover;
+    background-position: center;
+    position: absolute;
+    border-radius: 50%;
+    animation: neptuneMove 17s linear infinite;
+}
+.uranus {
+    z-index: 1;
+    width: 85px;
+    height:85px;
+    background-image: url("https://imgs.search.brave.com/r97yfyX3LrzQgsB-V9H5o09StIFlnE8-F5EiueIgZrE/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly9jbGlw/YXJ0LWxpYnJhcnku/Y29tL25ld2hwL2p1/cGl0ZXItcGxhbmV0/LW1lcmN1cnktdXJh/bnVzLWNsaXAtYXJ0/LXBsYW5ldC12ZWN0/b3ItbWF0ZXJpYWwu/anBn");
+    background-size: cover;
+    background-position: center;
+    position: absolute;
+    border-radius: 50%;
+    animation: uranusMove 15s linear infinite;
+}
+.pluto {
+    z-index: 1;
+    width: 45px;
+    height:45px;
+    background-image: url("https://imgs.search.brave.com/2IXCIEEQ5i9d5QSkTDU3ii-OWjbDsVD3b863Gl7aMFM/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9mcmVl/ZGVzaWduZmlsZS5j/b20vaW1hZ2UvdGh1/bWIvMzA2NDUvcGx1/dG8tY2xpcGFydC5w/bmc");
+    background-size: cover;
+    background-position: center;
+    position: absolute;
+    border-radius: 50%;
+    animation: plutoMove 19s linear infinite;
+}
+
+/* planet animations */
+@keyframes moonMove {
+    0% { top: 10px; left: 10px; }
+    25% { top: 10px; left: calc(100% - 90px); }
+    50% { top: calc(100% - 100px); left: calc(100% - 90px); }
+    75% { top: calc(100% - 100px); left: 10px; }
+    100% { top: 10px; left: 10px; }
+}
+@keyframes marsMove {
+    0% { top: 10px; left: 50%; }
+    25% { top: 50%; left: calc(100% - 10%); }
+    50% { top: calc(100% - 10%); left: calc(100% - 50%); }
+    75% { top: calc(100% - 50%); left: 10px; }
+    100% { top: 10px; left: 50%; }
+}
+@keyframes mercuryMove {
+    0% { top: 10px; left: 75%; }
+    25% { top: 75%; left: calc(100% - 10%); }
+    50% { top: calc(100% - 10%); left: calc(100% - 75%); }
+    75% { top: calc(100% - 75%); left: 10px; }
+    100% { top: 10px; left: 75%; }
+}
+@keyframes venusMove {
+    0% { top: 10px; left: 50%; }
+    25% { top: 50%; left: calc(100% - 10%); }
+    50% { top: calc(100% - 10%); left: calc(100% - 50%); }
+    75% { top: calc(100% - 50%); left: 10px; }
+    100% { top: 10px; left: 50%; }
+}
+@keyframes earthMove {
+    0% { top: 10px; left: 10px; }
+    25% { top: 10px; left: calc(100% - 90px); }
+    50% { top: calc(100% - 100px); left: calc(100% - 90px); }
+    75% { top: calc(100% - 100px); left: 10px; }
+    100% { top: 10px; left: 10px; }
+}
+@keyframes jupiterMove {
+    0% { top: 10px; left: 50%; }
+    25% { top: 50%; left: calc(100% - 10%); }
+    50% { top: calc(100% - 10%); left: calc(100% - 50%); }
+    75% { top: calc(100% - 50%); left: 10px; }
+    100% { top: 10px; left: 50%; }
+}
+@keyframes saturnMove {
+    0% { top: 10px; left: 25%; }
+    25% { top: 25%; left: calc(100% - 10%); }
+    50% { top: calc(100% - 10%); left: calc(100% - 25%); }
+    75% { top: calc(100% - 25%); left: 10px; }
+    100% { top: 10px; left: 25%; }
+}
+@keyframes neptuneMove {
+    00% { top: 10px; left: 75%; }
+    25% { top: 75%; left: calc(100% - 10%); }
+    50% { top: calc(100% - 10%); left: calc(100% - 75%); }
+    75% { top: calc(100% - 75%); left: 10px; }
+    100% { top: 10px; left: 75%; }
+}
+@keyframes uranusMove {
+    0% { top: 10px; left: 50%; }
+    25% { top: 50%; left: calc(100% - 10%); }
+    50% { top: calc(100% - 10%); left: calc(100% - 50%); }
+    75% { top: calc(100% - 50%); left: 10px; }
+    100% { top: 10px; left: 50%; }
+}
+@keyframes plutoMove {
+    0% { top: 10px; left: 25%; }
+    25% { top: 25%; left: calc(100% - 10%); }
+    50% { top: calc(100% - 10%); left: calc(100% - 25%); }
+    75% { top: calc(100% - 25%); left: 10px; }
+    100% { top: 10px; left: 25%; }
+}</style>
 {% extends "base.html" %}
-{% block title %}home{% endblock %}
 {% block content %}
 {% if user.is_authenticated %}
 hi {{ user.username }}
@@ -9,6 +259,8 @@ hi {{ user.username }}
 </form>
 {% else %}
 <p>youre not logged in</p>
-<a href="{% url 'login' %}">log in</a>
+<a href="{% url 'login' %}">lets fix that</a>
 {% endif %}
 {% endblock %}
+    </body>
+</html>
