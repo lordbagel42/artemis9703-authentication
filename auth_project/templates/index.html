@@ -5,6 +5,8 @@
         <link rel="icon" type="image/x-icon" href="https://em-content.zobj.net/source/joypixels-animations/366/rocket_1f680.gif">
     </head>
     <body>
+{% extends "base.html" %}
+{% block content %}
         <h2>welcome to our solar system</h2>
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur et labore illo at, repudiandae provident aut adipisci vel voluptatibus ducimus natus, expedita qui impedit placeat ad? Illum quae asperiores nesciunt!
         Ratione, dolore, asperiores minima iste a iusto ex, modi aliquam nulla assumenda non? Sint dolores maxime beatae itaque, dolorum voluptatibus deserunt error, facere obcaecati quia, autem laudantium nihil amet repellat!</p>
@@ -74,7 +76,7 @@ a:hover {
     background-position: center;
     position: absolute;
     border-radius: 50%;
-    animation: moonMove 18s linear infinite;
+    animation: moonMove 19s linear infinite;
 }
 .mars {
     z-index: 1;
@@ -175,7 +177,7 @@ a:hover {
     background-position: center;
     position: absolute;
     border-radius: 50%;
-    animation: plutoMove 19s linear infinite;
+    animation: plutoMove 21s linear infinite;
 }
 
 /* planet animations */
@@ -248,11 +250,17 @@ a:hover {
     50% { top: calc(100% - 10%); left: calc(100% - 25%); }
     75% { top: calc(100% - 25%); left: 10px; }
     100% { top: 10px; left: 25%; }
-}</style>
-{% extends "base.html" %}
-{% block content %}
+}
+button {
+    border-radius: 5px;
+    border-color: white;
+}
+button:hover {
+    background-color: gold;
+}
+</style>
 {% if user.is_authenticated %}
-hi {{ user.username }}
+<p>hi {{ user.username }}</p>
 <form action="{% url 'logout' %}" method="post">
     {% csrf_token %}
     <button type="submit">log out</button>
@@ -260,6 +268,8 @@ hi {{ user.username }}
 {% else %}
 <p>youre not logged in</p>
 <a href="{% url 'login' %}">lets fix that</a>
+<p>dont have an account?</p>
+<a href="{% url 'signup' %}">sign up</a>
 {% endif %}
 {% endblock %}
     </body>
