@@ -4,7 +4,7 @@ from cryptography.fernet import Fernet
 import os
 from django.contrib.auth import get_user_model
 
-User = get_user_model
+User = get_user_model()
 
 def hash_and_encrypt_upload(instance, filename):
 

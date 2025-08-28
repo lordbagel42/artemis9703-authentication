@@ -10,9 +10,9 @@ from .forms import RegistrationForm
 from .models import HashedImage
 
 
-User = get_user_model
+User = get_user_model()
 
-def register_view(request):
+def signup_view(request):
     error=""
     if request.method =='POST':
         form = RegistrationForm(request.POST, request.FILES)
@@ -51,7 +51,7 @@ def image_login_view(request):
             except User.DoesNotExist:
                 return render(request, 'login.html', {'form': form, 'error':error})
             try:
-                
+
                 hashed_image = HashedImage.objects.get(user=user)
             except HashedImage.DoesNotExist:
                 error = "theres no image registered with this username"
