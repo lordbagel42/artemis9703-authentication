@@ -1,15 +1,25 @@
-{% extends "base.html" %}
-{% block title %}signup{% endblock %}
-{% block content %}
-<h2>signup</h2>
-<head>
-    <link rel="icon" type="image/x-icon" href="https://em-content.zobj.net/source/joypixels-animations/366/rocket_1f680.gif">
-</head>
-<body>
-<form method="post">
-    {% csrf_token %}
-    {{ form }}
-    <button type="submit">sign up</button>
-</form>
-</body>
-{% endblock %}
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Signup</title>
+    </head>
+    <body>
+        <h2>signup</h2>
+
+        {% if error %}
+            <p style="color:lightcoral;">{{ error }}</p>
+        {% endif %}
+
+        <form method="post" enctype="multipart/form-data">
+            {% csrf_token %}
+            {{ form.username.label_tag }}<br>
+            {{ form.username }}<br><br>
+
+            {{ form.image.label_tag }}<br>
+            {{ form.image }}<br><br>
+
+            <button type="submit">signup</button>
+        </form>
+    </body>
+</html>
