@@ -64,3 +64,6 @@ def image_login_view(request):
     else:
         form = ImageLoginForm()
     return render(request, 'login.html', {'form':form, 'error':error})
+
+def index(request):
+    return render(request, 'index.html')
