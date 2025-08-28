@@ -9,7 +9,6 @@ from .forms import ImageLoginForm
 from .forms import RegistrationForm
 from .models import HashedImage
 
-
 User = get_user_model()
 
 def signup_view(request):
