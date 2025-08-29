@@ -22,5 +22,6 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 urlpatterns = [
     path('',include("imagePass.urls")),
+    path('',include("starChart.urls")),
     path('admin/', admin.site.urls),
 ]

@@ -1,5 +1,3 @@
-
-
 import hashlib
 from cryptography.fernet import Fernet
 from django.shortcuts import render, redirect
