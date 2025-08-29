@@ -1,1 +1,3 @@
 # authentication
+
+authentication is my last project for the athena award, and i am also submitting it to the ysws authly. i decieded to code this using python and django, both fairly new to me. this project was a big challenge for me because i have never used django before, and this is my second time with python. i picked this project because i wanted my last submission for athena to be challenging and different. i have worked on this for almost 2 weeks and i am so happy to have actually been able to complete it. this is definetly the most challenging project i have done before, and i cant wait to share it. 
