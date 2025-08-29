@@ -3,10 +3,11 @@
     <head>
         <meta charset="UTF-8">
         <title>Signup</title>
+        <link rel="icon" type="image/x-icon" href="https://em-content.zobj.net/source/facebook/65/crescent-moon_1f319.png">
     </head>
     <body>
         <h2>signup</h2>
-
+        <div class="rocket"></div>
         {% if error %}
             <p style="color:lightcoral;">{{ error }}</p>
         {% endif %}
@@ -21,5 +22,64 @@
 
             <button type="submit">signup</button>
         </form>
+        <style>
+body {
+    height: 100vh;
+    margin: 0;
+    overflow: hidden;
+    z-index: 0;
+    background-image: url("https://imgs.search.brave.com/dhmLqvapfWl8jPLViC6YUhO1aAh_UMWRVSquhOPfFcY/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly93YWxs/cGFwZXJhY2Nlc3Mu/Y29tL2Z1bGwvNDEz/MjQ0LmpwZw");
+    background-repeat: no-repeat;
+    background-size: cover;
+    text-align: center;
+}
+h2, h3, h4, p, label, li, ul {
+    color: white;
+    position: relative;
+    z-index: 2;
+
+}
+h2 {
+    font-size: 50px;
+    -webkit-text-stroke: 1px black;
+}
+h3 {
+    font-size: 25px;
+}
+a:link, a:visited, a:active {
+    color: white;
+    text-decoration: underline;
+}
+a:hover {
+    text-decoration-style: wavy;
+    z-index: 3;
+}
+button {
+    border-radius: 5px;
+    border-color: white;
+}
+button:hover {
+    background-color: gold;
+}
+.rocket {
+    z-index: 0.5;
+    width: 150px;
+    height: 150px;
+    background-image: url("https://imgs.search.brave.com/6RhA1BgrxQY0m2tIieeXp_QIDS72PkyrSn_Nns6lL6w/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9jbGlw/YXJ0LWxpYnJhcnku/Y29tL2ltYWdlX2dh/bGxlcnkvMTAxOTY4/LnBuZw");
+    background-size: cover;
+    position: absolute;
+    background-size: cover;
+    background-position: center;
+    position: absolute;
+    animation: rocketMove 19s linear infinite;
+}
+@keyframes rocketMove {
+    0% { top: 10px; left: 50%; transform: rotate(-180deg);}
+    25% { top: 50%; left: calc(100% - 10%); }
+    50% { top: calc(100% - 10%); left: calc(100% - 50%); transform: rotate(180deg);}
+    75% { top: calc(100% - 50%); left: 10px; }
+    100% { top: 10px; left: 50%; transform: rotate(-180deg);}
+}
+        </style>
     </body>
 </html>
