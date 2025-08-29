@@ -14,11 +14,9 @@ def star(request):
             return redirect('star')
     else:
         form = starSightingForm()
-    return render(request, 'star.html',
-{'form': form})
+    return render(request, 'star.html', {'form': form})
 
 @login_required
 def star(request):
     sightings = starSighting.objects.filter(user=request.user).order_by('-date_seen')
-    return render(request, 'star.html',
-{'sightings': sightings})
+    return render(request, 'star.html', {'sightings': sightings})

@@ -1,1 +1,30 @@
-hii
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Star Chart</title>
+        <link rel="icon" type="image/x-icon" href="https://em-content.zobj.net/source/samsung/78/white-medium-star_2b50.png">   
+    </head>
+    <body>
+        {% block content %}
+        <h2>star chart</h2>
+        <ul>
+            {% for sighting in sightings %}
+                <li>{{ sighting.star_name }} - {{ sighting.date_seen }}</li>
+            {% empty %}
+                <li>no stars recorded</li>
+            {% endfor %}
+        </ul>
+        <h2>add a new star sighting</h2>
+        <form method="post">
+            {% csrf_token %}
+            <label for="id_star_name">Star Name:</label>
+            <input type="text" name="star_name" id="id_star_name" value="{{ form.star_name.value|default_if_none:'' }}" />
+
+            <label for="id_date_seen">Date Seen:</label>
+            <input type="date" name="date_seen" id="id_date_seen" value="{{ form.date_seen.value|default_if_none:'' }}" />
+
+            <button type="submit">add a sighting</button>
+        </form>
+        {% endblock %}
+    </body>
+</html>
