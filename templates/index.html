@@ -261,15 +261,16 @@ button:hover {
 </style>
 {% if user.is_authenticated %}
 <p>hi {{ user.username }}</p>
+<a href="{% url 'star' %}">star chart</a>
 <form action="{% url 'logout' %}" method="post">
     {% csrf_token %}
-    <button type="submit">log out</button>
+    <br><button type="submit">log out</button>
 </form>
 {% else %}
-<p>youre not logged in</p>
-<a href="{% url 'login' %}">lets fix that</a>
-<p>dont have an account?</p>
-<a href="{% url 'signup' %}">sign up</a>
+<p>youre not logged in<br>
+<a href="{% url 'login' %}">lets fix that</a></p>
+<p>dont have an account?<br>
+<a href="{% url 'signup' %}">sign up</a></p>
 {% endif %}
 {% endblock %}
     </body>
