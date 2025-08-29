@@ -57,7 +57,7 @@ def image_login_view(request):
                 return render(request, 'login.html', {'form': form, 'error':error})
             if hashed_image.image_hash == image_hash:
                 login(request, user)
-                return redirect('home')
+                return redirect('index')
             else:
                 error = "thats the wrong picture"
 

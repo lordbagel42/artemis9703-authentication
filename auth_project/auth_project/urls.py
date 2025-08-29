@@ -18,12 +18,9 @@ from django.contrib import admin
 from django.urls import include, path
 import os
 
-
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 urlpatterns = [
-    path('', index, name='index'),
     path('',include("imagePass.urls")),
     path('admin/', admin.site.urls),
-
 ]
