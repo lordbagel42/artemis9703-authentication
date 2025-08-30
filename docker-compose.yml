@@ -1,0 +1,5 @@
+services:
+  web:
+    image: ghcr.io/artemis9703/authentication
+    ports:
+      - "8000:8000"
